@@ -1,0 +1,40 @@
+{
+  "name": "to-php-array",
+  "version": "0.0.1",
+  "description": "",
+  "author": "",
+  "repository": "https://github.com/",
+  "license": "MIT",
+  "keywords": [
+    "typescript",
+    "",
+    ""
+  ],
+  "main": "./dist/main.js",
+  "types": "./dist/main.d.ts",
+  "bin": {
+    "to-php-array": "./dist/cli.js"
+  },
+  "scripts": {
+    "cli": "ts-node src/cli.ts",
+    "lint": "eslint src/ --ext .ts",
+    "test": "jest",
+    "clean": "rm -rf dist",
+    "ts-node": "ts-node",
+    "build": "tsc -p tsconfig.json",
+    "build-cli": "esbuild src/cli.ts --bundle --platform=node --minify --sourcemap=external --outfile=dist/cli.js",
+    "build-all": "yarn clean && yarn build && yarn build-cli"
+  },
+  "devDependencies": {
+    "@types/jest": "^28.1.3",
+    "@types/node": "^18.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.20.0",
+    "@typescript-eslint/parser": "^5.20.0",
+    "esbuild": "^0.14.38",
+    "eslint": "^8.18.0",
+    "jest": "28.1.1",
+    "ts-jest": "^28.0.5",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.7.0"
+  }
+}
